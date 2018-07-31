@@ -8,16 +8,15 @@
 
 	<a-scene light="defaultLightsEnabled: true" embedded arjs>
 		<a-assets>
-			<img id="Tara" src="img/Tara.jpg" crossorigin="anonymous">
+			<img id="Desk" src="img/desk.jpeg" crossorigin="anonymous">
 			<img id="Long" src="img/Long.jpg" crossorigin="anonymous">
-			<img id="John" src="img/John.jpg" crossorigin="anonymous">
 		</a-assets>
 
-		<a-marker preset='custom' type="pattern" patternUrl='patts/test.patt'><a-image width="1" height="1" rotation="-90 0 0" src="#John"></a-image></a-marker> 
-		<a-marker preset='hiro'><a-image width="1" height="1" rotation="-90 0 0" src="#Long"></a-image></a-marker>
+		<!-- <a-marker preset='custom' patternUrl='patts/test.patt'><a-image width="1" height="1" rotation="-90 0 0" src="#John"></a-image></a-marker>  -->
+		<a-marker preset='hiro'><a-image width="1" height="1" rotation="-90 0 0" src="#Desk"><a-text color="green" value="Desk Empty" position="-.5 -.7 0"></a-text></a-image></a-marker>
 
 		<!-- The third code only lets the other two markers work with preset='hiro'....-->
-		<a-marker preset='kanji'><a-image width="1" height="1" rotation="-90 0 0" src="#Long"></a-image></a-marker> 
+		<a-marker preset='kanji'><a-image width="1" height="1" rotation="-90 0 0" src="#Long"><a-text value="David Long, CEO" position="-.5 -1 0"></a-text></a-image></a-marker> 
 
 		<a-entity camera></a-entity>
 	</a-scene>

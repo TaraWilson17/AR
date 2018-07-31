@@ -7989,7 +7989,7 @@ ARjs.MarkersAreaUtils.createDefaultMultiMarkerFile = function(trackingBackend){
 	if( trackingBackend === 'artoolkit' ){
 		file.subMarkersControls[0].parameters.type = 'pattern'
 		file.subMarkersControls[0].parameters.patternUrl = absoluteBaseURL + 'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
-		//file.subMarkersControls[0].parameters.patternUrl = 'patts/lol.patt'
+		//file.subMarkersControls[0].parameters.patternUrl = '../patts/test.patt'
 	}else if( trackingBackend === 'aruco' ){
 		file.subMarkersControls[0].parameters.type = 'barcode'
 		file.subMarkersControls[0].parameters.barcodeValue = 1001
@@ -8277,10 +8277,6 @@ AFRAME.registerComponent('arjs-anchor', {
                 arProfile.defaultMarkerParameters.type = 'pattern' 
                 arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl; 
 				arProfile.defaultMarkerParameters.markersAreaEnabled = false
-			} else if( _this.data.preset === 'ugh'){
-				markerParameters.type = 'pattern'
-                markerParameters.patternUrl = _this.data.patternUrl; 
-				markerParameters.markersAreaEnabled = false
             } else if( _this.data.preset === 'hiro' ){
 				markerParameters.type = 'pattern'
 				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
