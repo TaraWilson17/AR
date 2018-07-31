@@ -13,33 +13,37 @@
 	<a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
 		<a-assets>
-			<img id="Desk" src="img/Desk.jpeg" crossorigin="anonymous">
-			<img id="Long" src="img/Long.jpg" crossorigin="anonymous">
-			<img id="John" src="img/John.jpg" crossorigin="anonymous">
-			<img id="Tara" src="img/Tara.jpg" crossorigin="anonymous">
+			<img id="EmptyDesk" src="img/EmptyDesk.jpeg" crossorigin="anonymous">
+			<img id="OccupiedDesk" src="img/OccupiedDesk.jpeg" crossorigin="anonymous">
+			<img id="Long" src="img/DaveLong.jpg" crossorigin="anonymous">
+			<img id="Dante" src="img/DanteMartinez.jpg" crossorigin="anonymous">
 		</a-assets>
 
 		<a-marker type='barcode' value='0'>
-			<a-image width="1" height="1" rotation="-90 0 0" src="#Desk">
-				<a-text color="green" value="Desk Empty" position="-.5 -.7 0"></a-text>
+			<a-image width="1" height="1" rotation="-90 0 0" src="#EmptyDesk">
+				<a-text color="#000000" value="#26-366" position="-.5 -.7 0"></a-text>
+				<a-text color="green" value="Workstation Empty" position="-.5 -1 0"></a-text>
 			</a-image>
 		</a-marker>
 
 		<a-marker type='barcode' value='1'>
-			<a-image width="1" height="1" rotation="-90 0 0" src="#Long">
-				<a-text color="black" value="David Long, CEO" position="-.5 -.7 0"></a-text>
+			<a-image width="1" height="1" rotation="-90 0 0" src="#OccupiedDesk">
+				<a-text color="#000000" value="#26-365" position="-.5 -.7 0"></a-text>
+				<a-text color="red" value="Workstation Occupied" position="-.5 -1 0"></a-text>
 			</a-image>
 		</a-marker>
 
 		<a-marker type='barcode' value='2'>
-			<a-image width="1" height="1" rotation="-90 0 0" src="#John">
-				<a-text color="pruple" value="Lol John" position="-.5 -.7 0"></a-text>
+			<a-image width="1" height="1" rotation="-90 0 0" src="#Long">
+				<a-text color="black" value="David Long" position="-.5 -.7 0"></a-text>
+				<a-text color="black" value="CEO, Chairman" position="-.5 -1 0"></a-text>			
 			</a-image>
 		</a-marker>
 
 		<a-marker type='barcode' value='3'>
-			<a-image width="1" height="1" rotation="-90 0 0" src="#Tara">
-				<a-text color="purple" value="Hi Tara" position="-.5 -.7 0"></a-text>
+			<a-image width="1" height="1" rotation="-90 0 0" src="#Dante">
+				<a-text color="black" value="Dante Martinez" position="-.5 -.7 0"></a-text>
+				<a-text color="black" value="Program Manager, TechStart" position="-.5 -1 0"></a-text>	
 			</a-image>
 		</a-marker>
 
