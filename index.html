@@ -1,0 +1,26 @@
+<!-- include aframe obviously -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<!-- include ar.js for a-frame -->
+<script src="src/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+
+	<a-scene light="defaultLightsEnabled: true" embedded arjs>
+		<a-assets>
+			<img id="Tara" src="img/Tara.jpg" crossorigin="anonymous">
+			<img id="Long" src="img/Long.jpg" crossorigin="anonymous">
+			<img id="John" src="img/John.jpg" crossorigin="anonymous">
+		</a-assets>
+
+		<a-marker preset='custom' patternUrl='patts/test.patt'><a-image width="1" height="1" rotation="-90 0 0" src="#John"></a-image></a-marker> 
+		<a-marker preset='hiro'><a-image width="1" height="1" rotation="-90 0 0" src="#Long">David Long</a-image></a-marker>
+
+		<!-- The third code only lets the other two markers work with preset='hiro'....-->
+		<a-marker preset='hiro' patternUrl='patts/lol.patt'><a-image width="1" height="1" rotation="-90 0 0" src="#Long"></a-image></a-marker> 
+
+		<a-entity camera></a-entity>
+	</a-scene>
+
+
+</body>
